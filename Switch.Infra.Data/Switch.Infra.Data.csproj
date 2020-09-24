@@ -1,16 +1,40 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+    <Compile Remove="Migrations\20200923201813_NovosCamposUsuario.cs" />
+    <Compile Remove="Migrations\20200923201813_NovosCamposUsuario.Designer.cs" />
+    <Compile Remove="Migrations\20200923201917_NovosCamposUsuario.cs" />
+    <Compile Remove="Migrations\20200923201917_NovosCamposUsuario.Designer.cs" />
+    <Compile Remove="Migrations\20200923203630_AddIdentificacao.cs" />
+    <Compile Remove="Migrations\20200923203630_AddIdentificacao.Designer.cs" />
+    <Compile Remove="Migrations\20200923205600_AddIdentificacao.cs" />
+    <Compile Remove="Migrations\20200923205600_AddIdentificacao.Designer.cs" />
+    <Compile Remove="Migrations\20200924121922_AddRelacionamentoUsuarioGrupo.cs" />
+    <Compile Remove="Migrations\20200924121922_AddRelacionamentoUsuarioGrupo.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Switch.Domain\Switch.Domain.csproj" />
   </ItemGroup>
 
 </Project>
